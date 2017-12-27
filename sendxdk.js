@@ -1,6 +1,6 @@
-injector = angular.element(document.body).injector();
-$http = injector.get("$http");
-var i2n = function (imin) {
+var injector = angular.element(document.body).injector();
+var $http = injector.get("$http");
+function i2n(imin) {
     var c = 0, aa = 0, st,bb;
     var link = "https://orbi.kr/api/v1/user/" + imin + "/timeline";
     var bc = $http({
@@ -15,8 +15,8 @@ var i2n = function (imin) {
         bb = '000' + bd.toString();
     });
     return bb;
-};
-var abh =  function (num, r) {
+}
+function abh(num, r) {
     if (num === undefined) {
         return "there is n error";
     }
@@ -33,5 +33,5 @@ var abh =  function (num, r) {
         var bk = response.data['data']['trx'];
         alert('거래 번호 : ' + bk);
     });
-};
+}
 
