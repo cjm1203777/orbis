@@ -1,4 +1,6 @@
-    injector = angular.element(document.body).injector();
+
+
+injector = angular.element(document.body).injector();
     $http = injector.get("$http");
     function abc() {
         var i2n = function (imin) {
@@ -16,7 +18,7 @@
                 bb = '000' + bd.toString();
             });
             return bb;
-        }
+        };
         var abh =  function (num, r) {
             if (num === undefined) {
                 return "there is an error";
@@ -34,5 +36,5 @@
                 var bk = response.data['data']['trx'];
                 alert('거래 번호 : ' + bk);
             });
-        }
+        };
     }
