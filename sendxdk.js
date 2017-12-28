@@ -20,7 +20,7 @@ function i2n(imin) {
 }
 function abh(num, r) {
     if (num === undefined) {
-        return "there is n error";
+        return "there is an error : errorcode=1";
     }
     var link2 = "https://orbi.kr/api/v1/board/post/" + num + "/send_xdk";
     var bj = $http({
