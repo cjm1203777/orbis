@@ -33,7 +33,7 @@ function abh(num, r) {
     });
     bj.then(function (response) {
         var bk = response.data['data']['trx'];
-        alert('거래 번호 : ' + bk);
+        alert('거래 번호 : ' + bk+'\n금액 : '+r+'\n이 전송되었습니다.');
     });
 }
 
