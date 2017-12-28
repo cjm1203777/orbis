@@ -1,7 +1,7 @@
 var injector = angular.element(document.body).injector();
 var $http = injector.get("$http");
+var be,bb,bd;
 function i2n(imin) {
-    var c = 0, aa = 0, st,bb;
     var link = "https://orbi.kr/api/v1/user/" + imin + "/timeline";
     var bc = $http({
         method: 'GET',
@@ -10,8 +10,10 @@ function i2n(imin) {
             return angular.fromJson(data)
         }
     });
+
     bc.then(function (response) {
-        bd = response.data['data']['posts'][0]['id'];
+        be = response.data;
+        bd = response.data.data.posts[0].id;
         bb = '000' + bd.toString();
     });
     return bb;
